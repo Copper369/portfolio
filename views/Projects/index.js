@@ -68,15 +68,6 @@ const ProjectTextSide = (props) => {
                 className='ai-projects-text-tecs'>
                 {techs.map((tech, i) => `${tech} ${techs.length - 1 !== i ? ' | ' : ''}`)}
             </div>
-            {link && (
-                <div
-                    data-aos={`zoom-in-${side}`}
-                    className='ai-projects-text-link'>
-                    <a href={link} target="_blank" rel="noopener noreferrer" className='ai-button'>
-                        View Live Project →
-                    </a>
-                </div>
-            )}
         </div>
     )
 }
