@@ -2,6 +2,19 @@ const projects = {
     heading: `Major Projects`,
     list: [
         {
+            image: '/assets/projects/rolazdoro.png',
+            label: 'Featured Project',
+            title: 'StudyHub',
+            description: 'A centralized academic resource platform where students can access notes, study materials, and exam resources in one place. Integrated with Razorpay for secure payments, allowing controlled distribution of premium study content while simplifying access for students.',
+            link: 'https://studyhub-vercel.vercel.app',
+            techs: [
+                'React Js',
+                'Node.js',
+                'Razorpay API',
+                'MongoDB',
+            ]
+        },
+        {
             image: '/assets/projects/PIAIC.png',
             label: 'Featured Project',
             title: 'ResearchHub AI',
@@ -37,18 +50,7 @@ const projects = {
                 'Dashboard',
             ]
         },
-        {
-            image: '/assets/projects/rolazdoro.png',
-            label: 'Featured Project',
-            title: 'StudyHub',
-            description: 'A centralized academic resource platform where students can access notes, study materials, and exam resources in one place. Integrated with Razorpay for secure payments, allowing controlled distribution of premium study content while simplifying access for students.',
-            techs: [
-                'React Js',
-                'Node.js',
-                'Razorpay API',
-                'MongoDB',
-            ]
-        },
+        
         {
             image: '/assets/projects/chainracers.png',
             label: 'Featured Project',
