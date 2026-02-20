@@ -16,7 +16,7 @@ Your project is 100% ready. Just copy and paste these commands!
 **B. Push Code (Copy & Paste):**
 ```bash
 # Replace YOUR_USERNAME with your GitHub username
-git remote add origin https://github.com/YOUR_USERNAME/portfolio-fullstack.git
+git remote add origin https://github.com/Copper1729/.me.git
 git push -u origin main
 ```
 
