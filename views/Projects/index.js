@@ -4,18 +4,23 @@ import WindowScreen from '../../components/WindowScreen'
 import HoverImage from '../../components/HoverImage'
 import ViewsTitle from '../../components/ViewsTitle';
 
-const WindowImage = ({ src }) => (
-    <HoverImage
-        showFilter
-        imageClassName='ai-image'
-        src={src}
-    />
+const WindowImage = ({ src, link }) => (
+    <div 
+        onClick={() => link && window.open(link, '_blank')}
+        style={{ cursor: link ? 'pointer' : 'default' }}
+    >
+        <HoverImage
+            showFilter
+            imageClassName='ai-image'
+            src={src}
+        />
+    </div>
 )
 
 const getSide = (index) => index % 2 ? 'left' : 'right'
 
 const SingleProject = (props) => {
-    const { image, index } = props
+    const { image, index, link } = props
     const side = getSide(index);
     return (
         <div className='ai-projects-single'>
@@ -23,7 +28,7 @@ const SingleProject = (props) => {
                 <div className='col-6 d-none d-lg-block'>
                     <div className=''>
                         <WindowScreen containerClassName={`ai-projects-image-container ai-projects-image-container-${side}`}>
-                            <WindowImage src={image} />
+                            <WindowImage src={image} link={link} />
                         </WindowScreen>
                     </div>
                 </div>
@@ -36,7 +41,7 @@ const SingleProject = (props) => {
 }
 
 const ProjectTextSide = (props) => {
-    const { label, title, description, techs, index, image } = props
+    const { label, title, description, techs, index, image, link } = props
     const side = getSide(index);
     return (
         <div
@@ -54,7 +59,7 @@ const ProjectTextSide = (props) => {
                 {description}
                 <div className='mt-4 d-block d-lg-none'>
                     <WindowScreen containerClassName={`ai-text-image-container`}>
-                        <WindowImage src={image} />
+                        <WindowImage src={image} link={link} />
                     </WindowScreen>
                 </div>
             </div>
@@ -63,6 +68,15 @@ const ProjectTextSide = (props) => {
                 className='ai-projects-text-tecs'>
                 {techs.map((tech, i) => `${tech} ${techs.length - 1 !== i ? ' | ' : ''}`)}
             </div>
+            {link && (
+                <div
+                    data-aos={`zoom-in-${side}`}
+                    className='ai-projects-text-link'>
+                    <a href={link} target="_blank" rel="noopener noreferrer" className='ai-button'>
+                        View Live Project →
+                    </a>
+                </div>
+            )}
         </div>
     )
 }
