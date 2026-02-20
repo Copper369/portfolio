@@ -1,25 +1,20 @@
-import { useEffect } from 'react'
-import { useDencrypt } from "use-dencrypt-effect";
+import { useEffect, useState } from 'react'
 
 const DecryptText = ({
     values = ['Empty'],
     delay = 5000
 }) => {
-  const { result, dencrypt } = useDencrypt();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    let i = 1;
-
     const action = setInterval(() => {
-      dencrypt(values[i]);
-
-      i = i === values.length - 1 ? 0 : i + 1;
+      setCurrentIndex((prev) => (prev + 1) % values.length);
     }, delay);
 
     return () => clearInterval(action);
-  }, []);
+  }, [values, delay]);
 
-  return <>{result || values[0]}</>;
+  return <>{values[currentIndex]}</>;
 };
 
 DecryptText.propTypes = {}
