@@ -1,0 +1,30 @@
+{
+  "name": "ayush-karnewar-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "vercel --prod",
+    "test:api": "node -e \"fetch('http://localhost:8000/health').then(r=>r.json()).then(console.log).catch(console.error)\""
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.0",
+    "next": "14.2.23",
+    "next-pwa": "^5.0.3",
+    "react": "^18.2.0",
+    "react-animated-cursor": "^2.5.1",
+    "react-dom": "18.2.0",
+    "react-scroll-parallax": "^3.3.1",
+    "react-spring": "^6.1.0",
+    "sass": "^1.54.0",
+    "use-dencrypt-effect": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3"
+  }
+}

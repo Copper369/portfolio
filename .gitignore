@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+backend/.env
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Python
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+
+# Testing
+coverage/
+.coverage
+
+# Misc
+.vercel
+.cache/

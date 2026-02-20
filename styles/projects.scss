@@ -1,0 +1,268 @@
+@import "./theme.scss";
+
+.ai-projects {
+  width: 100vw;
+  min-height: 100vh;
+
+  .ai-projects-container {
+    max-width: 1000px;
+    padding: 100px 0;
+    margin: auto;
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .ai-projects-single {
+      margin: 0 0 100px 0;
+    }
+
+    .blank {
+      width: 100%;
+      height: 50px;
+    }
+
+    .ai-projects-image-container {
+      width: 120%;
+      box-shadow: 0 10px 30px -15px $themeColor2;
+
+      .ai-image {
+        width: 100%;
+      }
+
+      .ai-taskbar {
+        background-color: $themeColor2;
+      }
+    }
+
+    .ai-projects-image-container-right {
+      margin-left: -20%;
+    }
+
+    .ai-projects-text-side {
+      max-width: 100%;
+      color: $themeColor3;
+
+      .ai-projects-text-featured {
+        margin: 10px 0px;
+        color: $themeColor4;
+        font-size: 13px;
+        font-weight: 400;
+      }
+
+      .ai-projects-text-title {
+        margin: 0px 0px 20px;
+        font-size: clamp(24px, 5vw, 28px);
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      .ai-projects-text-description {
+        box-shadow: 0 10px 30px -15px $themeColor2;
+        position: relative;
+        padding: 25px;
+        border-radius: $defaultBorder;
+        background-color: $themeColor2;
+        color: $themeColor4;
+        font-size: 14px;
+
+        display: flex;
+        flex-direction: column;
+
+        .ai-text-image-container {
+          width: 100%;
+          box-shadow: 0 10px 30px -15px $themeColor1;
+
+          .ai-image {
+            width: 100%;
+          }
+
+          .ai-taskbar {
+            background-color: $themeColor1;
+          }
+        }
+      }
+
+      .ai-projects-text-tecs {
+        margin: 25px 0px 10px;
+        line-height: 1;
+        font-size: 13px;
+      }
+    }
+
+    .ai-projects-text-side-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .ai-projects-text-side-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
+}
+
+
+// Mini Projects Card Section
+.ai-mini-projects-section {
+  width: 100vw;
+  padding: 80px 0 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.ai-mini-projects-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+.ai-mini-projects-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+/* CARD */
+.ai-mini-project-card {
+  width: 290px;
+  height: auto;
+  margin: 0 auto;
+  background-color: $themeColor2;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(100, 255, 218, 0.2);
+  }
+}
+
+/* TOOLS - macOS Window Controls */
+.ai-mini-project-tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  background: $themeColor2;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.ai-mini-project-circle {
+  padding: 0 4px;
+}
+
+.ai-mini-project-box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.ai-mini-project-red {
+  background-color: #ff605c;
+}
+
+.ai-mini-project-yellow {
+  background-color: #ffbd44;
+}
+
+.ai-mini-project-green {
+  background-color: #00ca4e;
+}
+
+/* CARD CONTENT */
+.ai-mini-project-content {
+  padding: 20px;
+}
+
+/* IMAGE SECTION */
+.ai-mini-project-image {
+  width: 100%;
+  height: 140px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: $themeColor1;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* META */
+.ai-mini-project-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: $themeColor3;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+/* INFO */
+.ai-mini-project-title {
+  color: $themeColor4;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.ai-mini-project-subtitle {
+  font-size: 12px;
+  color: $themeColor3;
+  margin-bottom: 12px;
+}
+
+.ai-mini-project-description {
+  font-size: 13px;
+  color: $themeColor3;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .ai-mini-projects-section {
+    padding: 60px 0 80px;
+  }
+
+  .ai-mini-projects-container {
+    padding: 30px 15px;
+  }
+
+  .ai-mini-projects-grid {
+    gap: 20px;
+  }
+
+  .ai-mini-project-card {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  .ai-mini-project-subtitle {
+    font-size: 12px;
+  }
+
+  .ai-mini-project-back-title {
+    font-size: 20px;
+  }
+
+  .ai-mini-project-description {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,232 @@
+@import "./theme.scss";
+
+.ai-contact {
+  width: 100vw;
+
+  .ai-contact-zebra-img {
+    height: 150px;
+    width: 1000%;
+    background-size: contain;
+    margin: 100px 0 50px 0%;
+
+    img {
+      fill: blue;
+      color: yellow;
+    }
+  }
+
+  .ai-contact-box {
+    background-color: $themeColor2;
+    text-align: center;
+
+    .ai-contact-content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 40px 20px;
+      align-items: start;
+    }
+
+    .ai-contact-info {
+      text-align: left;
+    }
+
+    .ai-contact-box-width {
+      max-width: 600px;
+      padding: 100px 0 20px 0;
+    }
+
+    .ai-contact-label {
+      font-size: clamp(15px, 2vw, 20px);
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: $themeColor4;
+    }
+
+    .ai-contact-title {
+      font-size: clamp(35px, 5vw, 50px);
+      line-height: 1.5;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: $themeColor3;
+    }
+
+    .ai-contact-text {
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.6;
+      color: $themeColor3;
+    }
+
+    .ai-contact-button {
+      margin-top: 40px;
+    }
+  }
+
+  .ai-contact-form-wrapper {
+    background: rgba(100, 255, 218, 0.08);
+    border: 2px solid rgba(100, 255, 218, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: rgba(100, 255, 218, 0.4);
+      box-shadow: 0 15px 40px rgba(100, 255, 218, 0.15);
+    }
+  }
+
+  .ai-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ai-form-group {
+    width: 100%;
+  }
+
+  .ai-form-input {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(10, 25, 47, 0.4);
+    border: none;
+    border-bottom: 2px solid rgba(136, 146, 176, 0.4);
+    color: $themeColor3;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    outline: none;
+
+    &::placeholder {
+      color: rgba(136, 146, 176, 0.7);
+    }
+
+    &:focus {
+      border-bottom-color: $themeColor4;
+      background: rgba(100, 255, 218, 0.08);
+    }
+  }
+
+  .ai-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    border: 2px solid rgba(136, 146, 176, 0.4);
+    border-radius: 8px;
+    padding: 15px 20px;
+    background: rgba(10, 25, 47, 0.4);
+
+    &:focus {
+      border-color: $themeColor4;
+      background: rgba(100, 255, 218, 0.08);
+    }
+  }
+
+  .ai-form-submit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .ai-form-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .ai-form-error {
+    padding: 12px 20px;
+    background: rgba(255, 82, 82, 0.1);
+    border: 1px solid rgba(255, 82, 82, 0.3);
+    border-radius: 8px;
+    color: #ff5252;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .ai-form-success {
+    padding: 12px 20px;
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    border-radius: 8px;
+    color: $themeColor4;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .ai-contact-git-section {
+    margin-top: 80px;
+    font-size: 14px;
+    color: $themeColor3;
+    line-height: 1.5;
+    font-weight: 600;
+    cursor: pointer;
+
+    svg {
+      stroke: $themeColor3;
+      width: 14px;
+    }
+
+    span {
+      margin: 0 5px;
+    }
+
+    &:hover {
+      color: $themeColor4;
+
+      svg {
+        stroke: $themeColor4;
+      }
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .ai-contact {
+    .ai-contact-box {
+      .ai-contact-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 80px 20px 20px;
+      }
+
+      .ai-contact-info {
+        text-align: center;
+      }
+    }
+
+    .ai-contact-form-wrapper {
+      padding: 30px 20px;
+    }
+
+    .ai-contact-git-section {
+      margin-top: 60px;
+    }
+  }
+}
