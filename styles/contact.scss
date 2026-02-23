@@ -20,17 +20,20 @@
     text-align: center;
 
     .ai-contact-content-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      display: flex;
+      justify-content: center;
       max-width: 1200px;
       margin: 0 auto;
       padding: 100px 40px 20px;
-      align-items: start;
     }
 
     .ai-contact-info {
       text-align: left;
+      max-width: 600px;
+    }
+
+    .ai-contact-info-centered {
+      text-align: center;
     }
 
     .ai-contact-box-width {
@@ -211,18 +214,12 @@
   .ai-contact {
     .ai-contact-box {
       .ai-contact-content-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
         padding: 80px 20px 20px;
       }
 
       .ai-contact-info {
         text-align: center;
       }
-    }
-
-    .ai-contact-form-wrapper {
-      padding: 30px 20px;
     }
 
     .ai-contact-git-section {

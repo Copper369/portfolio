@@ -192,9 +192,7 @@
 .ai-mini-project-image {
   width: 100%;
   height: 140px;
-  border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 16px;
   background: $themeColor1;
   
   img {
@@ -209,9 +207,11 @@
   display: flex;
   justify-content: space-between;
   font-size: 11px;
-  color: $themeColor3;
+  color: $themeColor4;
   opacity: 0.7;
   margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* INFO */
@@ -221,12 +221,6 @@
   font-size: 16px;
   margin-bottom: 8px;
   line-height: 1.3;
-}
-
-.ai-mini-project-subtitle {
-  font-size: 12px;
-  color: $themeColor3;
-  margin-bottom: 12px;
 }
 
 .ai-mini-project-description {
@@ -254,15 +248,11 @@
     max-width: 290px;
   }
 
-  .ai-mini-project-subtitle {
-    font-size: 12px;
-  }
-
-  .ai-mini-project-back-title {
-    font-size: 20px;
+  .ai-mini-project-title {
+    font-size: 15px;
   }
 
   .ai-mini-project-description {
-    font-size: 14px;
+    font-size: 12px;
   }
 }

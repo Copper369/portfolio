@@ -72,37 +72,34 @@ const ProjectTextSide = (props) => {
     )
 }
 
-const MiniProjectCard = ({ title, subtitle, description, image, index }) => {
+const MiniProjectCard = ({ title, subtitle, description, image, index, link }) => {
     return (
         <div 
             className="ai-mini-project-card"
             data-aos="fade-up"
             data-aos-delay={index * 100}
+            onClick={() => link && window.open(link, '_blank')}
+            style={{ cursor: link ? 'pointer' : 'default' }}
         >
             <div className="ai-mini-project-tools">
                 <div className="ai-mini-project-circle">
-                    <span className="ai-mini-project-red ai-mini-project-box"></span>
+                    <span className="ai-mini-project-box ai-mini-project-red"></span>
                 </div>
                 <div className="ai-mini-project-circle">
-                    <span className="ai-mini-project-yellow ai-mini-project-box"></span>
+                    <span className="ai-mini-project-box ai-mini-project-yellow"></span>
                 </div>
                 <div className="ai-mini-project-circle">
-                    <span className="ai-mini-project-green ai-mini-project-box"></span>
+                    <span className="ai-mini-project-box ai-mini-project-green"></span>
                 </div>
             </div>
-            
+            <div className="ai-mini-project-image">
+                {image && <img src={image} alt={title} />}
+            </div>
             <div className="ai-mini-project-content">
-                <div className="ai-mini-project-image">
-                    {image && <img src={image} alt={title} />}
-                </div>
-                
                 <div className="ai-mini-project-meta">
-                    <span>Project</span>
-                    <span>2024</span>
+                    <span>{subtitle}</span>
                 </div>
-                
                 <div className="ai-mini-project-title">{title}</div>
-                <div className="ai-mini-project-subtitle">{subtitle}</div>
                 <div className="ai-mini-project-description">{description}</div>
             </div>
         </div>

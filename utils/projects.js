@@ -77,43 +77,51 @@ const projects = {
         },
     ],
     miniProjects: {
-        heading: 'Mini Projects',
+        heading: 'Hobby Projects',
         list: [
             {
                 title: 'ICRTCT 2026',
                 subtitle: 'Conference Website',
                 description: 'International conference management with live updates and submission tracking',
-                image: '/assets/projects/PIAIC.png',
+                image: '/assets/icrtet.png',
+                link: 'https://dypcet.in/ICRTET-2026',
             },
             {
                 title: 'Medical Management App',
                 subtitle: 'MERN Stack',
                 description: 'Full-stack medical management system with appointment booking, sold to local doctor',
-                image: '/assets/projects/chainracers.png',
+                image: '/assets/medicalapp.png',
+            },
+            {
+                title: 'Mendhi Card Game',
+                subtitle: 'Multiplayer Game',
+                description: 'A real-time multiplayer implementation of the Indian card game "Mendhi" with stunning UI.',
+                image: '/assets/cards.jpg',
+                link: 'https://mendhikot-io.vercel.app/',
             },
             {
                 title: 'Crowd Density Analyzer',
                 subtitle: 'AI Safety System',
                 description: 'Real-time visual analysis for crowd density estimation and safety monitoring',
-                image: '/assets/projects/digitalplattform.png',
+                image: '/assets/crowd.png',
             },
             {
                 title: 'SenseAI',
                 subtitle: 'Image to Text AI',
                 description: 'Real-time AI converting images to text with interactive chat-based understanding',
-                image: '/assets/projects/declinica.png',
+                image: '/assets/Senseai.png',
             },
             {
                 title: 'Planet PDF',
                 subtitle: 'Smart Document Platform',
                 description: 'Multi-format file conversion with AI-powered document chat for quick retrieval',
-                image: '/assets/projects/rolazdoro.png',
+                image: '/assets/planetpdf.png',
             },
             {
                 title: 'Raspberry Pi IoT',
                 subtitle: 'DIY Tech Project',
                 description: 'Worked on DIY tech with Raspberry Pi and IoT integration for Women Safety',
-                image: '/assets/projects/dailycart.png',
+                image: '/assets/raspi.png',
             },
         ]
     }
