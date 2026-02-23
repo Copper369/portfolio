@@ -1,7 +1,7 @@
 import { openLink } from "./methods"
 
 const certifications = {
-    heading:  `Certifications & Achievements`,
+    heading:  `Certifications & Licenses`,
     list: [
         {
             size: 1,
