@@ -80,7 +80,7 @@ const projects = {
         heading: 'Hobby Projects',
         list: [
             {
-                title: 'ICRTCT 2026',
+                title: 'ICRTET 2026',
                 subtitle: 'Conference Website',
                 description: 'International conference management with live updates and submission tracking',
                 image: '/assets/icrtet.png',
