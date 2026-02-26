@@ -33,6 +33,9 @@ const Certifications = ({ data: {
     list,
     handleIconClick
 } }) => {
+    // Duplicate items for infinite scroll effect
+    const duplicatedList = [...(list || []), ...(list || [])];
+    
     return (
         <div className='ai-certifications'>
             <div className='container-fluid'>
@@ -40,18 +43,15 @@ const Certifications = ({ data: {
                 <div className='ai-certifications-container'>
                     <div className='ai-certifications-header'>
                         <ViewsTitle text={heading} />
-                        <div className='ai-scroll-hint'>← Scroll horizontally →</div>
                     </div>
-                    <div className='ai-cert-horizontal-scroll'>
-                        <div className='ai-cert-cards-wrapper'>
-                            {(list || []).map((item, i) => (
-                                <SingleItem 
-                                    key={i} 
-                                    {...item} 
-                                    handleIconClick={handleIconClick} 
-                                />
-                            ))}
-                        </div>
+                    <div className='ai-cert-carousel-track'>
+                        {duplicatedList.map((item, i) => (
+                            <SingleItem 
+                                key={i} 
+                                {...item} 
+                                handleIconClick={handleIconClick} 
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

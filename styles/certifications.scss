@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   padding: 100px 0;
+  overflow: hidden;
 
   .ai-certifications-top-background {
     height: 400px;
@@ -25,67 +26,28 @@
 
   .ai-certifications-header {
     padding: 0 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
-  .ai-scroll-hint {
-    text-align: center;
-    color: $themeColor4;
-    font-size: 14px;
-    opacity: 0.6;
-    margin-top: 10px;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 0.6;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-
-  .ai-cert-horizontal-scroll {
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100%;
-    padding: 30px 0;
-    scroll-behavior: smooth;
-    cursor: grab;
-    
-    &:active {
-      cursor: grabbing;
-    }
-
-    // Custom scrollbar styling
-    scrollbar-width: thin;
-    scrollbar-color: $themeColor4 $themeColor2;
-
-    &::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: $themeColor2;
-      border-radius: 10px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: $themeColor4;
-      border-radius: 10px;
-      
-      &:hover {
-        background: $themeColor3;
-      }
-    }
-  }
-
-  .ai-cert-cards-wrapper {
+  .ai-cert-carousel-track {
     display: flex;
     gap: 30px;
-    padding: 0 50px;
+    padding: 20px 50px;
+    animation: scroll-left 60s linear infinite;
     width: max-content;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .ai-cert-card {
@@ -102,6 +64,7 @@
       display: flex;
       flex-direction: column;
       transition: all 0.3s ease;
+      border: 2px solid transparent;
 
       .ai-item-head {
         display: flex;
@@ -151,7 +114,8 @@
 
       &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 20px 60px rgba(100, 255, 218, 0.3);
+        box-shadow: 0 20px 60px rgba(100, 255, 218, 0.4);
+        border-color: rgba(100, 255, 218, 0.3);
 
         .ai-item-title {
           color: $themeColor3;
@@ -173,11 +137,13 @@
 
     .ai-certifications-header {
       padding: 0 20px;
+      margin-bottom: 40px;
     }
 
-    .ai-cert-cards-wrapper {
+    .ai-cert-carousel-track {
       gap: 20px;
-      padding: 0 20px;
+      padding: 20px;
+      animation: scroll-left 50s linear infinite;
     }
 
     .ai-cert-card {
@@ -221,20 +187,13 @@
 
     .ai-certifications-header {
       padding: 0 15px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    .ai-scroll-hint {
-      font-size: 12px;
-    }
-
-    .ai-cert-horizontal-scroll {
-      padding: 20px 0;
-    }
-
-    .ai-cert-cards-wrapper {
+    .ai-cert-carousel-track {
       gap: 15px;
-      padding: 0 15px;
+      padding: 20px 15px;
+      animation: scroll-left 40s linear infinite;
     }
 
     .ai-cert-card {

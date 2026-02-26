@@ -68,6 +68,22 @@ const ProjectTextSide = (props) => {
                 className='ai-projects-text-tecs'>
                 {techs.map((tech, i) => `${tech} ${techs.length - 1 !== i ? ' | ' : ''}`)}
             </div>
+            {link && (
+                <div
+                    data-aos={`zoom-in-${side}`}
+                    className='ai-projects-live-btn-container'>
+                    <button 
+                        className='ai-projects-live-btn'
+                        onClick={() => window.open(link, '_blank')}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                            <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                        VIEW LIVE PROJECT
+                    </button>
+                </div>
+            )}
         </div>
     )
 }
@@ -75,33 +91,47 @@ const ProjectTextSide = (props) => {
 const MiniProjectCard = ({ title, subtitle, description, image, index, link }) => {
     return (
         <div 
-            className="ai-mini-project-card"
+            className="ai-fancy-card"
             data-aos="fade-up"
-            data-aos-delay={index * 100}
-            onClick={() => link && window.open(link, '_blank')}
-            style={{ cursor: link ? 'pointer' : 'default' }}
+            data-aos-delay={index * 50}
         >
-            <div className="ai-mini-project-tools">
-                <div className="ai-mini-project-circle">
-                    <span className="ai-mini-project-box ai-mini-project-red"></span>
-                </div>
-                <div className="ai-mini-project-circle">
-                    <span className="ai-mini-project-box ai-mini-project-yellow"></span>
-                </div>
-                <div className="ai-mini-project-circle">
-                    <span className="ai-mini-project-box ai-mini-project-green"></span>
-                </div>
+            {/* Decorative Star */}
+            <div className="ai-fancy-star">
+                <svg strokeLinejoin="round" strokeLinecap="round" strokeWidth="1" fill="none" viewBox="0 0 24 24" height="200" width="200" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
             </div>
-            <div className="ai-mini-project-image">
+
+            {/* Circular Background */}
+            <div className="ai-fancy-circle"></div>
+
+            {/* Badge */}
+            <div className="ai-fancy-badge">
+                <p className="ai-fancy-badge-text">{subtitle}</p>
+            </div>
+
+            {/* Project Image */}
+            <div className="ai-fancy-img">
                 {image && <img src={image} alt={title} />}
             </div>
-            <div className="ai-mini-project-content">
-                <div className="ai-mini-project-meta">
-                    <span>{subtitle}</span>
-                </div>
-                <div className="ai-mini-project-title">{title}</div>
-                <div className="ai-mini-project-description">{description}</div>
+
+            {/* Project Info */}
+            <div className="ai-fancy-info">
+                <h3 className="ai-fancy-title">{title}</h3>
+                <p className="ai-fancy-description">{description}</p>
             </div>
+
+            {/* Action Button */}
+            {link && (
+                <div className="ai-fancy-action">
+                    <button 
+                        className="ai-fancy-btn"
+                        onClick={() => window.open(link, '_blank')}
+                    >
+                        VIEW LIVE
+                    </button>
+                </div>
+            )}
         </div>
     )
 }

@@ -130,71 +130,93 @@
   padding: 40px 0;
 }
 
-/* CARD */
-.ai-mini-project-card {
-  width: 290px;
-  height: auto;
+// Fancy Card Styling (Uiverse-inspired)
+.ai-fancy-card {
+  width: 300px;
   margin: 0 auto;
-  background-color: $themeColor2;
-  border-radius: 8px;
-  z-index: 1;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  position: relative;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 32px 24px;
+  background: $themeColor2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(100, 255, 218, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(100, 255, 218, 0.3);
+
+    .ai-fancy-star {
+      transform: rotate(12deg) scale(1.5);
+    }
+
+    .ai-fancy-circle {
+      top: 58%;
+    }
   }
 }
 
-/* TOOLS - macOS Window Controls */
-.ai-mini-project-tools {
-  display: flex;
-  align-items: center;
-  padding: 9px;
-  background: $themeColor2;
-  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+// Decorative Star
+.ai-fancy-star {
+  position: absolute;
+  left: -40%;
+  top: 0;
+  transition: all 0.3s ease;
+
+  svg {
+    fill: rgba(136, 146, 176, 0.2);
+    transform: rotate(24deg);
+  }
 }
 
-.ai-mini-project-circle {
-  padding: 0 4px;
-}
-
-.ai-mini-project-box {
-  display: inline-block;
-  align-items: center;
-  width: 10px;
-  height: 10px;
-  padding: 1px;
+// Circular Background
+.ai-fancy-circle {
+  position: absolute;
   border-radius: 50%;
+  background: rgba(136, 146, 176, 0.3);
+  z-index: 1;
+  left: 50%;
+  top: 44%;
+  height: 110%;
+  width: 110%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
 }
 
-.ai-mini-project-red {
-  background-color: #ff605c;
+// Badge
+.ai-fancy-badge {
+  text-transform: uppercase;
+  text-align: center;
+  leading: none;
+  z-index: 10;
+  position: relative;
+
+  .ai-fancy-badge-text {
+    font-weight: 600;
+    font-size: 11px;
+    color: $themeColor4;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    margin: 0;
+  }
 }
 
-.ai-mini-project-yellow {
-  background-color: #ffbd44;
-}
-
-.ai-mini-project-green {
-  background-color: #00ca4e;
-}
-
-/* CARD CONTENT */
-.ai-mini-project-content {
-  padding: 20px;
-}
-
-/* IMAGE SECTION */
-.ai-mini-project-image {
-  width: 100%;
-  height: 140px;
+// Image
+.ai-fancy-img {
+  width: 180px;
+  aspect-ratio: 1;
+  background: rgba(136, 146, 176, 0.1);
+  z-index: 10;
+  border-radius: 12px;
   overflow: hidden;
-  background: $themeColor1;
-  
+  position: relative;
+
   img {
     width: 100%;
     height: 100%;
@@ -202,32 +224,86 @@
   }
 }
 
-/* META */
-.ai-mini-project-meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  color: $themeColor4;
-  opacity: 0.7;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+// Info Section
+.ai-fancy-info {
+  z-index: 10;
+  text-align: center;
+  width: 100%;
 }
 
-/* INFO */
-.ai-mini-project-title {
+.ai-fancy-title {
+  font-size: 18px;
+  font-weight: 700;
   color: $themeColor4;
-  font-weight: 600;
-  font-size: 16px;
   margin-bottom: 8px;
   line-height: 1.3;
 }
 
-.ai-mini-project-description {
+.ai-fancy-description {
   font-size: 13px;
   color: $themeColor3;
   line-height: 1.5;
-  opacity: 0.8;
+  opacity: 0.85;
+  margin: 0;
+}
+
+// Action Button
+.ai-fancy-action {
+  z-index: 10;
+  margin-top: 8px;
+}
+
+.ai-fancy-btn {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: $themeColor4;
+  color: $themeColor1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    background: $themeColor3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(100, 255, 218, 0.4);
+  }
+}
+
+// View Live Button for Major Projects
+.ai-projects-live-btn-container {
+  margin-top: 30px;
+}
+
+.ai-projects-live-btn {
+  background: $themeColor4;
+  color: $themeColor1;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background: $themeColor3;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.4);
+  }
 }
 
 @media (max-width: 768px) {
@@ -243,16 +319,26 @@
     gap: 20px;
   }
 
-  .ai-mini-project-card {
+  .ai-fancy-card {
     width: 100%;
     max-width: 290px;
+    padding: 28px 20px;
   }
 
-  .ai-mini-project-title {
-    font-size: 15px;
+  .ai-fancy-img {
+    width: 160px;
   }
 
-  .ai-mini-project-description {
+  .ai-fancy-title {
+    font-size: 16px;
+  }
+
+  .ai-fancy-description {
     font-size: 12px;
+  }
+
+  .ai-projects-live-btn {
+    font-size: 12px;
+    padding: 10px 20px;
   }
 }
