@@ -7,7 +7,6 @@
   display: flex;
   align-items: center;
   padding: 100px 0;
-  overflow: hidden;
 
   .ai-certifications-top-background {
     height: 400px;
@@ -20,39 +19,75 @@
 
   .ai-certifications-container {
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
+    padding: 0 50px;
   }
 
   .ai-certifications-header {
-    padding: 0 50px;
     margin-bottom: 50px;
   }
 
-  .ai-cert-carousel-track {
+  // Filter Tabs
+  .ai-cert-filters {
     display: flex;
-    gap: 30px;
-    padding: 20px 50px;
-    animation: scroll-left 60s linear infinite;
-    width: max-content;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
 
-    &:hover {
-      animation-play-state: paused;
+    .ai-filter-btn {
+      padding: 10px 24px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: $themeColor4;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      &.active {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
+  // Masonry Grid Layout
+  .ai-cert-masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
     }
-    100% {
-      transform: translateX(-50%);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
     }
   }
 
   .ai-cert-card {
-    flex-shrink: 0;
-    width: 420px;
     transition: transform 0.3s ease;
 
     .ai-item-body {
@@ -114,8 +149,8 @@
 
       &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 20px 60px rgba(100, 255, 218, 0.4);
-        border-color: rgba(100, 255, 218, 0.3);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.2);
 
         .ai-item-title {
           color: $themeColor3;
@@ -135,20 +170,25 @@
   .ai-certifications {
     padding: 80px 0;
 
-    .ai-certifications-header {
+    .ai-certifications-container {
       padding: 0 20px;
+    }
+
+    .ai-certifications-header {
       margin-bottom: 40px;
     }
 
-    .ai-cert-carousel-track {
-      gap: 20px;
-      padding: 20px;
-      animation: scroll-left 50s linear infinite;
+    .ai-cert-filters {
+      gap: 10px;
+      margin-top: 25px;
+
+      .ai-filter-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+      }
     }
 
     .ai-cert-card {
-      width: 320px;
-
       .ai-item-body {
         .ai-item-head {
           .ai-item-logo {
@@ -185,20 +225,25 @@
   .ai-certifications {
     padding: 60px 0;
 
-    .ai-certifications-header {
+    .ai-certifications-container {
       padding: 0 15px;
+    }
+
+    .ai-certifications-header {
       margin-bottom: 30px;
     }
 
-    .ai-cert-carousel-track {
-      gap: 15px;
-      padding: 20px 15px;
-      animation: scroll-left 40s linear infinite;
+    .ai-cert-filters {
+      gap: 8px;
+      margin-top: 20px;
+
+      .ai-filter-btn {
+        padding: 7px 15px;
+        font-size: 12px;
+      }
     }
 
     .ai-cert-card {
-      width: 280px;
-
       .ai-item-body {
         .ai-item-head {
           .ai-item-logo {

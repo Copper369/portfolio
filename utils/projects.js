@@ -2,16 +2,17 @@ const projects = {
     heading: `Major Projects`,
     list: [
         {
-            image: '/assets/projects/rolazdoro.png',
+            image: '/assets/drishyamitra.png',
             label: 'Featured Project',
-            title: 'StudyHub',
-            description: 'A centralized academic resource platform where students can access notes, study materials, and exam resources in one place. Integrated with Razorpay for secure payments, allowing controlled distribution of premium study content while simplifying access for students.',
-            link: 'https://studyhub-vercel.vercel.app',
+            title: 'Drishyamitra',
+            description: 'An AI-powered smart photo management system that automatically organizes and retrieves images using facial recognition and natural language interaction. It detects and groups people across photos, creates intelligent albums, and allows users to search or share memories through conversational commands, making large photo collections easy to manage.',
             techs: [
-                'React Js',
-                'Node.js',
-                'Razorpay API',
-                'MongoDB',
+                    'Flask',
+    'React.js',
+    'Computer Vision',
+    'DeepFace',
+    
+    'Natural Language Processing'
             ]
         },
         {
@@ -27,9 +28,22 @@ const projects = {
             ]
         },
         {
+            image: '/assets/projects/rolazdoro.png',
+            label: 'Featured Project',
+            title: 'StudyHub',
+            description: 'A centralized academic resource platform where students can access notes, study materials, and exam resources in one place. Integrated with Razorpay for secure payments, allowing controlled distribution of premium study content while simplifying access for students.',
+            link: 'https://studyhub-vercel.vercel.app',
+            techs: [
+                'React Js',
+                'Node.js',
+                'Razorpay API',
+                'MongoDB',
+            ]
+        },
+        {
             image: '/assets/projects/digitalplattform.png',
             label: 'Featured Project',
-            title: 'DUSTIN - Mental Health Companion',
+            title: 'DUSTIN - Mental Health Dr.',
             description: 'An AI-powered RAG-based, voice-enabled mental health support system designed to provide continuous, accessible, and emotionally safe assistance for children and young adults.',
             techs: [
                 'Python',
@@ -54,7 +68,7 @@ const projects = {
         {
             image: '/assets/projects/chainracers.png',
             label: 'Featured Project',
-            title: 'Sudama - Knowledge-Driven AI Chatbot',
+            title: 'Sudama- Knowledge-Driven AI Chatbot',
             description: 'Built Sudama, an AI chatbot trained on the Shiv Purana with domain-specific learning creating a persona, designed to provide contextual answers and meaningful spiritual insights.',
             techs: [
                 'Python',
@@ -63,41 +77,30 @@ const projects = {
                 'Chatbot Development',
             ]
         },
-        {
-            image: '/assets/projects/dailycart.png',
-            label: 'Featured Project',
-            title: 'Loki - Voice Assistant',
-            description: 'Developed Loki, an advanced voice assistant capable of answering diverse queries and seamlessly opening applications or websites through intuitive voice commands.',
-            techs: [
-                'Python',
-                'Voice Recognition',
-                'NLP',
-                'AI Assistant',
-            ]
-        },
     ],
     miniProjects: {
         heading: 'Hobby Projects',
         list: [
-            {
+                        {
                 title: 'ICRTET 2026',
                 subtitle: 'Conference Website',
                 description: 'International conference management with live updates and submission tracking',
                 image: '/assets/icrtet.png',
                 link: 'https://dypcet.in/ICRTET-2026',
             },
+            
+            {
+                title: 'Court Piece Game',
+                subtitle: 'Multiplayer Game',
+                description: 'A real-time multiplayer implementation of the Indian card game "Mendhi" with stunning UI.',
+                image: '/assets/cards.jpg',
+                link: 'https://mendhikot-io.vercel.app/',
+            },
             {
                 title: 'Medical Management App',
                 subtitle: 'MERN Stack',
                 description: 'Full-stack medical management system with appointment booking, sold to local doctor',
                 image: '/assets/medicalapp.png',
-            },
-            {
-                title: 'Mendhi Card Game',
-                subtitle: 'Multiplayer Game',
-                description: 'A real-time multiplayer implementation of the Indian card game "Mendhi" with stunning UI.',
-                image: '/assets/cards.jpg',
-                link: 'https://mendhikot-io.vercel.app/',
             },
             {
                 title: 'Crowd Density Analyzer',
@@ -122,6 +125,12 @@ const projects = {
                 subtitle: 'DIY Tech Project',
                 description: 'Worked on DIY tech with Raspberry Pi and IoT integration for Women Safety',
                 image: '/assets/raspi.png',
+            },
+            {
+                title: 'Loki - Voice Assistant',
+                subtitle: 'AI Voice Assistant',
+                description: 'Advanced voice assistant capable of answering diverse queries and seamlessly opening applications or websites through intuitive voice commands.',
+                image: '/assets/dailycart.png',
             },
         ]
     }

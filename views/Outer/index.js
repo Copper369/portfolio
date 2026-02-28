@@ -25,6 +25,7 @@ const Outer = ({ data: {
                         <div className='ai-outer-heading2'>
                             <DecryptText
                                 values={decrypTexts}
+                                delay={5000}
                             />
                         </div>
                         <div className='ai-outer-description'>

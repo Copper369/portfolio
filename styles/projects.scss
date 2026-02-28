@@ -108,7 +108,7 @@
 }
 
 
-// Mini Projects Card Section
+// Mini Projects Card Section with 4x4 Grid
 .ai-mini-projects-section {
   width: 100vw;
   padding: 80px 0 100px;
@@ -117,103 +117,62 @@
 }
 
 .ai-mini-projects-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding: 50px 20px;
 }
 
 .ai-mini-projects-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   padding: 40px 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-// Fancy Card Styling (Uiverse-inspired)
+// Clean, Professional Card Design
 .ai-fancy-card {
-  width: 300px;
-  margin: 0 auto;
+  width: 100%;
   border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  padding: 32px 24px;
   background: $themeColor2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(100, 255, 218, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
 
-    .ai-fancy-star {
-      transform: rotate(12deg) scale(1.5);
+    .ai-fancy-img img {
+      transform: scale(1.08);
     }
 
-    .ai-fancy-circle {
-      top: 58%;
+    .ai-fancy-overlay {
+      opacity: 1;
     }
   }
 }
 
-// Decorative Star
-.ai-fancy-star {
-  position: absolute;
-  left: -40%;
-  top: 0;
-  transition: all 0.3s ease;
-
-  svg {
-    fill: rgba(136, 146, 176, 0.2);
-    transform: rotate(24deg);
-  }
-}
-
-// Circular Background
-.ai-fancy-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(136, 146, 176, 0.3);
-  z-index: 1;
-  left: 50%;
-  top: 44%;
-  height: 110%;
-  width: 110%;
-  transform: translateX(-50%);
-  transition: all 0.3s ease;
-}
-
-// Badge
-.ai-fancy-badge {
-  text-transform: uppercase;
-  text-align: center;
-  leading: none;
-  z-index: 10;
-  position: relative;
-
-  .ai-fancy-badge-text {
-    font-weight: 600;
-    font-size: 11px;
-    color: $themeColor4;
-    opacity: 0.8;
-    letter-spacing: 1px;
-    margin: 0;
-  }
-}
-
-// Image
+// Image Container
 .ai-fancy-img {
-  width: 180px;
+  width: 100%;
   aspect-ratio: 1;
-  background: rgba(136, 146, 176, 0.1);
-  z-index: 10;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
   position: relative;
 
@@ -221,56 +180,95 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+}
+
+// Subtle Overlay on Hover
+.ai-fancy-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+// Badge
+.ai-fancy-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  .ai-fancy-badge-text {
+    font-weight: 600;
+    font-size: 10px;
+    color: $themeColor4;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-transform: uppercase;
   }
 }
 
 // Info Section
 .ai-fancy-info {
-  z-index: 10;
-  text-align: center;
-  width: 100%;
+  padding: 20px;
+  text-align: left;
 }
 
 .ai-fancy-title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 600;
   color: $themeColor4;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   line-height: 1.3;
 }
 
 .ai-fancy-description {
   font-size: 13px;
   color: $themeColor3;
-  line-height: 1.5;
-  opacity: 0.85;
+  line-height: 1.6;
+  opacity: 0.8;
   margin: 0;
 }
 
 // Action Button
 .ai-fancy-action {
-  z-index: 10;
-  margin-top: 8px;
+  padding: 0 20px 20px;
 }
 
 .ai-fancy-btn {
+  width: 100%;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 11px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: $themeColor4;
-  color: $themeColor1;
-  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: $themeColor4;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
 
   &:hover {
-    background: $themeColor3;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(100, 255, 218, 0.4);
   }
+}
+
+// Remove decorative elements
+.ai-fancy-star,
+.ai-fancy-circle,
+.ai-fancy-glow {
+  display: none;
 }
 
 // View Live Button for Major Projects
@@ -279,9 +277,9 @@
 }
 
 .ai-projects-live-btn {
-  background: $themeColor4;
-  color: $themeColor1;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: $themeColor4;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 13px;
@@ -297,12 +295,18 @@
   svg {
     width: 16px;
     height: 16px;
+    transition: transform 0.3s ease;
   }
 
   &:hover {
-    background: $themeColor3;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    svg {
+      transform: translateX(3px);
+    }
   }
 }
 
@@ -315,18 +319,8 @@
     padding: 30px 15px;
   }
 
-  .ai-mini-projects-grid {
-    gap: 20px;
-  }
-
   .ai-fancy-card {
-    width: 100%;
-    max-width: 290px;
     padding: 28px 20px;
-  }
-
-  .ai-fancy-img {
-    width: 160px;
   }
 
   .ai-fancy-title {
