@@ -95,6 +95,13 @@ const MiniProjectCard = ({ title, subtitle, description, image, index, link }) =
             data-aos="fade-up"
             data-aos-delay={index * 50}
         >
+            {/* Mac Window Controls */}
+            <div className="ai-mac-controls">
+                <span className="ai-mac-btn ai-mac-red"></span>
+                <span className="ai-mac-btn ai-mac-yellow"></span>
+                <span className="ai-mac-btn ai-mac-green"></span>
+            </div>
+
             {/* Decorative Star */}
             <div className="ai-fancy-star">
                 <svg strokeLinejoin="round" strokeLinecap="round" strokeWidth="1" fill="none" viewBox="0 0 24 24" height="200" width="200" xmlns="http://www.w3.org/2000/svg">
