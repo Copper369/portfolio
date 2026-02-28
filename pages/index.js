@@ -14,6 +14,7 @@ import { contact, graphics, header, mapsContribution, mySelf, outer, projects, r
 import sideElements from "../utils/sideElements";
 import Cursor from "../components/Cursor";
 import PreLoader from "../components/PreLoader";
+import PlantSignature from "../components/PlantSignature";
 import Certifications from "../views/Certifications";
 import certifications from "../utils/certifications";
 
@@ -27,6 +28,9 @@ export default function Home() {
       <PreLoader />
 
       <Cursor />
+      
+      <PlantSignature />
+      
       <ParallaxProvider>
 
         <TopScrolledBar />

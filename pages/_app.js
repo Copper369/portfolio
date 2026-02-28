@@ -25,6 +25,7 @@ import '/styles/contact.scss'
 import '/styles/cursor.scss'
 import '/styles/pre-loader.scss'
 import '/styles/certifications.scss'
+import '/styles/plant-signature.scss'
 
 
 function MyApp({ Component, pageProps }) {
