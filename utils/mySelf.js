@@ -17,7 +17,7 @@ const mySelf = {
         'Python',
         'AI/ML & Prompt Engineering',
         'RAG Systems',
-        'Voice Assistants',
+        'Chatbots & Voice Assistants',
         'Chatbot Development',
         'Data Analytics'
     ],

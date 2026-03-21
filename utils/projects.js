@@ -6,27 +6,25 @@ const projects = {
             label: 'Featured Project',
             title: 'Drishyamitra',
             description: 'An AI-powered smart photo management system that automatically organizes and retrieves images using facial recognition and natural language interaction. It detects and groups people across photos, creates intelligent albums, and allows users to search or share memories through conversational commands, making large photo collections easy to manage.',
+            link: 'https://laughing-waddle-snowy.vercel.app',       
             techs: [
-                    'Flask',
-    'React.js',
-    'Computer Vision',
-    'DeepFace',
-    
+                    'Flask','React.js','Computer Vision','DeepFace',  
     'Natural Language Processing'
             ]
         },
         {
-            image: '/assets/projects/PIAIC.png',
+            image: '/assets/projects/digitalplattform.png',
             label: 'Featured Project',
-            title: 'ResearchHub AI',
-            description: 'An AI-powered research paper management platform that helps researchers discover, organize, and analyze academic papers efficiently. Features intelligent paper search, workspace-based organization, and an AI chatbot that provides contextual summaries and insights from multiple research documents, significantly reducing literature review time.',
+            title: 'DUSTIN - Mental Health Dr.',
+            description: 'An AI-powered RAG-based, voice-enabled mental health support system designed to provide continuous, accessible, and emotionally safe assistance for children and young adults.',
             techs: [
                 'Python',
-                'AI/ML',
-                'NLP',
                 'RAG System',
+                'Voice AI',
+                'Mental Health AI',
             ]
         },
+        
         {
             image: '/assets/projects/rolazdoro.png',
             label: 'Featured Project',
@@ -41,15 +39,15 @@ const projects = {
             ]
         },
         {
-            image: '/assets/projects/digitalplattform.png',
+            image: '/assets/projects/PIAIC.png',
             label: 'Featured Project',
-            title: 'DUSTIN - Mental Health Dr.',
-            description: 'An AI-powered RAG-based, voice-enabled mental health support system designed to provide continuous, accessible, and emotionally safe assistance for children and young adults.',
+            title: 'ResearchHub AI',
+            description: 'An AI-powered research paper management platform that helps researchers discover, organize, and analyze academic papers efficiently. Features intelligent paper search, workspace-based organization, and an AI chatbot that provides contextual summaries and insights from multiple research documents, significantly reducing literature review time.',
             techs: [
                 'Python',
+                'AI/ML',
+                'NLP',
                 'RAG System',
-                'Voice AI',
-                'Mental Health AI',
             ]
         },
         {

@@ -38,11 +38,13 @@ const works = {
                     role: 'Virtual Internships',
                     duration: 'Multiple Programs',
                     points: [
+                        'AI Deployment & Automation - AWS SageMaker, Google Vertex AI, Azure ML',
                         `Google AIML Virtual Internship - Machine Learning and AI fundamentals`,
                         "AWS GenAI Virtual Internship - Generative AI on AWS platform",
                         'Ethical Hacking Virtual Internship - Cybersecurity and penetration testing',
                         'Cloud Virtual Internship - Cloud computing and infrastructure',
                         'Google GenAI Virtual Internship - Advanced Generative AI techniques'
+
                     ],
                 }
             ]

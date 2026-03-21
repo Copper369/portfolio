@@ -85,7 +85,13 @@ const reviews = {
             
             image: '/assets/projects/dkms.jpg',
         },
-       
+        {
+            title: 'SKN 24-Hour Hackathon',
+            subtitle: 'Sinhgad College Hackathon at Pandharpur',
+            
+            image: '/assets/projects/1773748443282.jpg',
+        },
+    //    1773748443282.jpg
        
     ]
 }
