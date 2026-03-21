@@ -1,4 +1,5 @@
 import React, { useRef, useMemo } from 'react';
+/* eslint-disable react/no-unknown-property */
 import { Canvas, useFrame, extend } from '@react-three/fiber';
 import { OrbitControls, Effects } from '@react-three/drei';
 import { UnrealBloomPass } from 'three-stdlib';
