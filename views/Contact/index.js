@@ -45,7 +45,22 @@ const Contact = ({ data: {
                     backgroundImage: `url(${'/assets/arrow-sample.svg'})`,
                 }}>
             </div>
-            <div className='ai-contact-box'>
+            <div className='ai-contact-box' style={{ position: 'relative', overflow: 'hidden' }}>
+                {/* Supernova background */}
+                <iframe
+                    src="/blackhole"
+                    style={{
+                        position: 'absolute',
+                        top: 0, left: 0,
+                        width: '100%', height: '100%',
+                        border: 'none',
+                        zIndex: 0,
+                        pointerEvents: 'none',
+                        opacity: 0.4,
+                    }}
+                    title="supernova"
+                />
+                <div style={{ position: 'relative', zIndex: 1 }}>
                 <div className='container'>
                     <div className='ai-contact-content-wrapper'>
                         {/* Say Hello Section */}
@@ -90,6 +105,7 @@ const Contact = ({ data: {
                             </div>
                         )}
                     </div>
+                </div>
                 </div>
             </div>
         </div>

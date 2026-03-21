@@ -1,0 +1,5 @@
+// All page content sits above the black hole iframe
+.view-element {
+  position: relative;
+  z-index: 1;
+}
