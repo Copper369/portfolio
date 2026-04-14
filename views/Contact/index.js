@@ -4,6 +4,45 @@ import { useParallax } from 'react-scroll-parallax';
 import Star from '../../components/SVGs/Star';
 import GitFork from '../../components/SVGs/GitFork';
 
+const PhoneCopyButton = () => {
+    const [copied, setCopied] = useState(false);
+    const phone = '+91 9960670950';
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText('9960670950').then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
+    };
+
+    return (
+        <button
+            onClick={handleCopy}
+            style={{
+                marginTop: '16px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(0, 173, 181, 0.1)',
+                border: '1px solid #00ADB5',
+                borderRadius: '8px',
+                padding: '10px 18px',
+                cursor: 'pointer',
+                fontSize: '14px',
+                fontWeight: '600',
+                color: '#00ADB5',
+                transition: 'all 0.2s ease',
+                letterSpacing: '0.5px',
+            }}
+        >
+            <span>📞 {phone}</span>
+            <span style={{ opacity: 0.8, fontSize: '12px' }}>
+                {copied ? '✓ Copied!' : 'Copy'}
+            </span>
+        </button>
+    );
+};
+
 const Contact = ({ data: {
     label,
     heading,
@@ -86,24 +125,14 @@ const Contact = ({ data: {
                                     {button?.label}
                                 </a>
                             </div>
+                            <div style={{ marginTop: '16px' }}>
+                                <PhoneCopyButton />
+                            </div>
                         </div>
                     </div>
 
                     <div onClick={handleBuiltByClick} className='ai-contact-git-section'>
                         <div>{designAndBuiltBy}</div>
-                        {!!(githubInfo.stars && githubInfo.forks) && (
-                            <div>
-                                <span>
-                                    <Star />
-                                    <>{' '}{githubInfo.stars.toLocaleString()}</>
-                                </span>
-                                {' '}
-                                <span>
-                                    <GitFork />
-                                    <>{' '}{githubInfo.forks.toLocaleString()}</>
-                                </span>
-                            </div>
-                        )}
                     </div>
                 </div>
                 </div>

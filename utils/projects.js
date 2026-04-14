@@ -2,6 +2,14 @@ const projects = {
     heading: `Major Projects`,
     list: [
         {
+            image: '/assets/image.png',
+            label: 'Featured Project',
+            title: 'IDiot – AI-Powered IoT Circuit Simulator',
+            description: 'Canvas-based IoT workspace with drag-drop components, real-time simulation, AI-generated layouts, and Arduino code export. Built to make IoT prototyping accessible and intelligent.',
+            link: 'https://idiot-iot.vercel.app',
+            techs: ['React.js', 'Canvas WS', 'AI Layout Generation', 'Arduino', 'IoT']
+        },
+        {
             image: '/assets/drishyamitra.png',
             label: 'Featured Project',
             title: 'Drishyamitra',

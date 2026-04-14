@@ -22,6 +22,7 @@ const SideElementsItem = ({ items, position }) => {
 
 const SideElements = ({ data: {
     emailButton,
+    phoneButton,
     handleIconClick,
 } }) => {
     return (

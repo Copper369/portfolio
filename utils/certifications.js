@@ -14,7 +14,7 @@ const certifications = {
         },
         {
             size: 1,
-            title: '600-Day Spanish Learning Streak',
+            title: '700-Day Spanish Learning Streak',
             platform: 'Duolingo',
             link: '',
             date: '2026',
