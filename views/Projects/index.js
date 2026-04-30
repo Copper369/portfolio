@@ -41,7 +41,7 @@ const SingleProject = (props) => {
 }
 
 const ProjectTextSide = (props) => {
-    const { label, title, description, techs, index, image, link } = props
+    const { label, title, description, techs, index, image, link, github } = props
     const side = getSide(index);
     return (
         <div
