@@ -8,7 +8,7 @@
   .ai-side-elements-container {
     position: fixed;
     bottom: 0;
-    z-index: 1;
+    z-index: 10;
 
     .ai-side-elements-item {
       margin: 20px 0;
@@ -20,6 +20,7 @@
         justify-content: center;
         color: inherit;
         text-decoration: none;
+        pointer-events: all;
       }
 
       svg {
