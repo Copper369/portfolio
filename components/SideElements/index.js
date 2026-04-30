@@ -20,6 +20,13 @@ const SideElementsItem = ({ items, position }) => {
 }
 
 
+const socialLinks = {
+    github: 'https://github.com/Copper369/',
+    instagram: 'https://www.instagram.com/ayush.apk_?igsh=YWVwajlqcGxxNTJy',
+    twitter: 'https://x.com/copperrr369',
+    linkedin: 'https://www.linkedin.com/in/ayush-karnewar-016460289/',
+}
+
 const SideElements = ({ data: {
     emailButton,
     phoneButton,
@@ -31,10 +38,18 @@ const SideElements = ({ data: {
             <SideElementsItem
                 position="left"
                 items={[
-                    <GitHub onClick={() => handleIconClick('github')} key="GitHub" width={20} height={20} />,
-                    <Instagram onClick={() => handleIconClick('instagram')} key="Instagram" width={20} height={20} />,
-                    <Twitter onClick={() => handleIconClick('twitter')} key="Twitter" width={20} height={20} />,
-                    <LinkedIn onClick={() => handleIconClick('linkedin')} key="LinkedIn" width={20} height={20} />,
+                    <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" key="GitHub" aria-label="GitHub">
+                        <GitHub width={20} height={20} />
+                    </a>,
+                    <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" key="Instagram" aria-label="Instagram">
+                        <Instagram width={20} height={20} />
+                    </a>,
+                    <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" key="Twitter" aria-label="Twitter">
+                        <Twitter width={20} height={20} />
+                    </a>,
+                    <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" key="LinkedIn" aria-label="LinkedIn">
+                        <LinkedIn width={20} height={20} />
+                    </a>,
                 ]}
             />
 
