@@ -1,23 +1,14 @@
 /** @type {import('next').NextConfig} */
 
-const withPWA = require("next-pwa");
-const runtimeCaching = require("next-pwa/cache");
-
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  
+
   images: {
     unoptimized: true,
     domains: ['localhost'],
   },
-  
-  pwa: {
-    dest: "public",
-    runtimeCaching,
-    disable: process.env.NODE_ENV === 'development',
-  },
-  
+
   // Security headers
   async headers() {
     return [
@@ -42,4 +33,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withPWA(nextConfig);
+module.exports = nextConfig;
